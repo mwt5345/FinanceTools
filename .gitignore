@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+
+# State files (local trading state)
+.portfolio.json
+.intraday_*.json
+.alpaca_*.json
+
+# Database
+backtest_results.db
+
+# Figures (generated output)
+figures/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

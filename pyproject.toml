@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finance-tools"
+version = "0.1.0"
+description = "Backtesting engine, portfolio strategies, and live trading tools for equities"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "scienceplots>=2.1",
+    "pandas",
+    "yfinance",
+]
+
+[project.optional-dependencies]
+alpaca = ["alpaca-py", "pyyaml"]
+streamlit = ["streamlit", "plotly"]
+dev = ["pytest"]
+all = ["finance-tools[alpaca,streamlit,dev]"]
+
+[project.scripts]
+ft-results = "finance_tools.data.view_results:main"
+
+[tool.setuptools.packages.find]
+include = ["finance_tools*"]
