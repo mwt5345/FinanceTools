@@ -12,6 +12,21 @@ Backtesting engine, portfolio strategies, and live trading tools for equities.
 - **Streamlit dashboard** -- interactive backtest comparison and visualization
 - **Publication-quality plots** -- SciencePlots + LaTeX rendering, colorblind-safe Tol Bright palette
 
+## Example: Strategy Comparison
+
+10-stock portfolio ($100K, 2020--2026) comparing four strategies across 1,538 trading days:
+
+![Portfolio Strategy Comparison](docs/portfolio_comparison.png)
+
+| Strategy | Final Value | Ann. Return | Sharpe | Max Drawdown | Trades |
+|---|---|---|---|---|---|
+| Equal Weight | $393,065 | 25.1% | 1.13 | -32.8% | 80 |
+| Inverse Volatility | $291,940 | 19.2% | 0.95 | -32.7% | 148 |
+| Mean Reversion (BB 20/2) | $325,416 | 21.3% | 0.87 | -44.4% | 1,463 |
+| Relative Strength (20d) | $203,316 | 12.3% | 0.51 | -33.0% | 8,559 |
+
+*Tickers: AAPL, DUK, F, JNJ, JPM, KO, MSFT, NVDA, PG, XOM. Risk-free rate: avg 2.75% (3-mo T-bill).*
+
 ## Architecture
 
 ```
